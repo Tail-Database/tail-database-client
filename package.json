@@ -2,7 +2,7 @@
   "name": "tail-database-client",
   "version": "0.0.1",
   "description": "Client for interacting with Tail Database on DataLayer",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "test": "jest --runInBand test/",
