@@ -1,5 +1,5 @@
 {
-  "name": "tail-database-client",
+  "name": "@tail-database/tail-database-client",
   "version": "0.0.1",
   "description": "Client for interacting with Tail Database on DataLayer",
   "main": "dist/index.js",
