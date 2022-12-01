@@ -25,8 +25,8 @@ export const validateTailRecord = (tailRecord: TailRecord) => {
         throw new Error('Currency code must have length between 1 and 8');
     }
 
-    if (tailRecord.description.length < 1 || tailRecord.description.length > 5000) {
-        throw new Error('Description must have length between 20 and 5000');
+    if (tailRecord.description.length > 5000) {
+        throw new Error('Description must have length less than 5000');
     }
 
     if (!CATEGORIES.includes(tailRecord.category)) {
