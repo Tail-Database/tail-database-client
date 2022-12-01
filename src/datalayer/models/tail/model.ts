@@ -16,6 +16,16 @@ export class Tail implements Model<TailRecord> {
         );
     }
 
+    public batch_insert(tailRecords: TailRecord[]): Promise<UpdateResponse> {
+        return this.dataLayer.batch_update(
+            tailRecords.map(tailRecord => ({
+                action: 'insert',
+                key: tailRecord.hash,
+                value: this.serializer.encode(tailRecord)
+            }))
+        );
+    }
+
     public update(tailRecord: TailRecord): Promise<UpdateResponse> {
         return this.dataLayer.batch_update(
             [
