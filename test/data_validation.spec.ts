@@ -52,14 +52,14 @@ describe('Tail Database Data Validation', () => {
             expect(() => validateTailRecord({
                 ...validTailRecord,
                 code: ''
-            })).toThrowError('Currency code must have length between 1 and 5');
+            })).toThrowError('Currency code must have length between 1 and 8');
         });
 
-        it('rejects code greater than 5 characters in length', () => {
+        it('rejects code greater than 8 characters in length', () => {
             expect(() => validateTailRecord({
                 ...validTailRecord,
-                code: 'AAAAAB'
-            })).toThrowError('Currency code must have length between 1 and 5');
+                code: 'AAAAABCDEFGHIJK'
+            })).toThrowError('Currency code must have length between 1 and 8');
         });
 
         it('rejects invalid category', () => {

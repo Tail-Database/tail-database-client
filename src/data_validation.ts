@@ -28,8 +28,8 @@ export const validateTailRecord = (tailRecord: TailRecord) => {
         throw new Error('Name must have length between 1 and 100');
     }
 
-    if (tailRecord.code.length < 1 || tailRecord.code.length > 5) {
-        throw new Error('Currency code must have length between 1 and 5');
+    if (tailRecord.code.length < 1 || tailRecord.code.length > 8) {
+        throw new Error('Currency code must have length between 1 and 8');
     }
 
     if (tailRecord.description.length < 1 || tailRecord.description.length > 5000) {
