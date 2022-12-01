@@ -97,27 +97,6 @@ describe('Tail Database Data Validation', () => {
             })).toThrowError('Eve Coin ID must be 64 characters');
         });
 
-        it('rejects invalid Website URL', () => {
-            expect(() => validateTailRecord({
-                ...validTailRecord,
-                website_url: 'google'
-            })).toThrowError('Website URL is invalid');
-        });
-
-        it('rejects invalid Twitter URL', () => {
-            expect(() => validateTailRecord({
-                ...validTailRecord,
-                twitter_url: 'google'
-            })).toThrowError('Twitter URL is invalid');
-        });
-
-        it('rejects invalid Discord URL', () => {
-            expect(() => validateTailRecord({
-                ...validTailRecord,
-                discord_url: 'google'
-            })).toThrowError('Discord URL is invalid');
-        });
-
         it('rejects XCH as currency code', () => {
             expect(() => validateTailRecord({
                 ...validTailRecord,

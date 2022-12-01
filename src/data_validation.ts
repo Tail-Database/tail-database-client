@@ -1,4 +1,3 @@
-import { URL } from 'url';
 import { TailRecord } from './datalayer/models/tail';
 import { CATEGORIES } from './constants';
 
@@ -8,12 +7,6 @@ const validateUrl = (name: string, url: string | undefined) => {
     if (url) {
         if (url.length > 200) {
             throw new Error(`${name} URL must be <= 200 characters`);
-        }
-
-        try {
-            new URL(url);
-        } catch (err) {
-            throw new Error(`${name} URL is invalid`);
         }
     }
 };
