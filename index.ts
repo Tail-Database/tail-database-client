@@ -1,5 +1,5 @@
 export { coin_name, hash_program, hex_to_program, match_cat_puzzle, uncurry } from './src/clvm';
-export { CATEGORIES, COIN_CREATE_CONDITION, MAGIC_SPEND } from './src/constants';
+export { CATEGORIES, AGG_SIG_ME, AGG_SIG_UNSAFE, COIN_CREATE_CONDITION, MAGIC_SPEND } from './src/constants';
 export { parseTailRecords, validateTailRecord } from './src/data_validation';
 export { Blockchain, RpcResponse } from './src/datalayer/blockchain_rpc';
 export { Coin, GetCoinRecordResponse, GetCoinRecordsByParentIdsResponse, GetPuzzleAndSolutionResponse } from './src/datalayer/coin_rpc';

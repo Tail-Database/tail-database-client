@@ -1,6 +1,6 @@
 {
   "name": "@tail-database/tail-database-client",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "Client for interacting with Tail Database on DataLayer",
   "main": "dist/index.js",
   "scripts": {
